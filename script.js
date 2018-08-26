@@ -38,11 +38,12 @@ window.onload=init;
 
 var tell_fortune = function(){
   var random_number = Math.random();
-  console.log(random_number);
+
+  random_number = Math.round(random_number);
 
   var answer = '';
 
-  if(random_number >= .5) {
+  if(random_number == 1) {
     answer = 'YES!';
   }
   else {
