@@ -65,7 +65,7 @@ var time = 0;
 var count_up = function(){
 
   if(keep_counting ==true){
-    document.getElementById('start_button').disabled = true;
+
     time = time + 1;
 
     document.getElementById('time').innerHTML = time;
@@ -78,8 +78,19 @@ var count_up = function(){
   }
 }
 
+var start = function(){
+  document.getElementById('start_button').disabled = true;
+
+  count_up();
+}
+
 var keep_counting = true;
 
 var stop = function(){
   keep_counting = false;
+}
+
+var reset = function(){
+  time = 0;
+  document.getElementById('time').innerHTML = time;
 }
