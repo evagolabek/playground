@@ -94,3 +94,5 @@ var reset = function(){
   time = 0;
   document.getElementById('time').innerHTML = time;
 }
+
+//////////////////////////////////////////////////////
