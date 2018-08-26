@@ -37,14 +37,18 @@ function $(id,val) {
 window.onload=init;
 
 var tell_fortune = function(){
-  var random_number = Math.random();
+  var random_number = Math.random() * 2;
 
   random_number = Math.round(random_number);
+  console.log(random_number);
 
   var answer = '';
 
-  if(random_number == 1) {
+  if(random_number == 2) {
     answer = 'YES!';
+  }
+  else if (random_number == 1) {
+    answer = 'MAYBE..';
   }
   else {
     answer = 'NO!';
