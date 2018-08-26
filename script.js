@@ -36,6 +36,7 @@ function $(id,val) {
 
 window.onload=init;
 
+//////////////////////////////////////////////////////////
 var tell_fortune = function(){
   var random_number = Math.random() * 2;
 
@@ -55,4 +56,13 @@ var tell_fortune = function(){
   }
 
   document.getElementById('answer').innerHTML = answer;
+}
+///////////////////////////////////////////////////////////
+
+var time = 0;
+
+var count_up = function(){
+  time = time + 1;
+
+  document.getElementById('time').innerHTML = time;
 }
