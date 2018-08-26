@@ -42,8 +42,11 @@ var tell_fortune = function(){
 
   var answer = '';
 
-  if(random_number > .5) {
+  if(random_number >= .5) {
     answer = 'YES!';
+  }
+  else {
+    answer = 'NO!';
   }
 
   document.getElementById('answer').innerHTML = answer;
