@@ -65,7 +65,7 @@ var time = 0;
 var count_up = function(){
 
   if(keep_counting ==true){
-
+    document.getElementById('start_button').disabled = true;
     time = time + 1;
 
     document.getElementById('time').innerHTML = time;
@@ -74,6 +74,7 @@ var count_up = function(){
   }
   else{
     keep_counting = true;
+    document.getElementById('start_button').disabled = false;
   }
 }
 
