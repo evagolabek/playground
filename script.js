@@ -35,3 +35,16 @@ function $(id,val) {
 };
 
 window.onload=init;
+
+var tell_fortune = function(){
+  var random_number = Math.random();
+  console.log(random_number);
+
+  var answer = '';
+
+  if(random_number > .5) {
+    answer = 'YES!';
+  }
+
+  document.getElementById('answer').innerHTML = answer;
+}
