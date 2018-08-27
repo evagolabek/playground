@@ -40,8 +40,8 @@ window.onload=init;
 
 var tell_fortune = function(){
   var random_number = Math.random() * 2;
-
   random_number = Math.round(random_number);
+
   console.log(random_number);
 
   var answer = '';
@@ -65,11 +65,8 @@ var time = 0;
 var count_up = function(){
 
   if(keep_counting ==true){
-
     time = time + 1;
-
     document.getElementById('time').innerHTML = time;
-
     setTimeout(count_up,100);
   }
   else{
@@ -96,3 +93,13 @@ var reset = function(){
 }
 
 //////////////////////////////////////////////////////
+
+var left = 0;
+
+var move_hero = function(){
+
+  left = left + 20;
+
+  document.getElementById('hero').style.left = left + 'px';
+  setTimeout(move_hero, 100);
+}
