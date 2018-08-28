@@ -95,11 +95,17 @@ var reset = function(){
 //////////////////////////////////////////////////////
 
 var left = 0;
+var step_num = 0;
 
 var move_hero = function(){
 
   left = left + 20;
+  if(step_num > 8){
+    step_num = 1;
+  }
 
   document.getElementById('hero').style.left = left + 'px';
+  document.getElementById('hero').src = 'hero_walking_'+step_num+'.png';
+  step_num = step_num + 1;
   setTimeout(move_hero, 100);
 }
