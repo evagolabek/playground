@@ -94,14 +94,19 @@ var reset = function(){
 
 //////////////////////////////////////////////////////
 
+//var hero = document.getElementById('hero'); //&replace below to save processing power and for the clean code
 var left = 0;
-var step_num = 0;
+var step_num = 1;
+var step_sound = new Audio('203041__jjhouse4__boots-and-spurs_step.mp3');
 
 var move_hero = function(){
 
   left = left + 20;
   if(step_num > 8){
     step_num = 1;
+  }
+  if(step_num == 1 || step_num == 5){
+    step_sound.play();
   }
 
   document.getElementById('hero').style.left = left + 'px';
