@@ -102,6 +102,11 @@ step_sound.volumne = .5;
 var move_hero = function(){
 
   left = left + 20;
+  if(left >= 130) {
+    hero.src = 'images/hero_walking_1.png';
+    return;
+  }
+
   if(step_num > 8){
     step_num = 1;
   }
@@ -109,7 +114,6 @@ var move_hero = function(){
 
     step_sound.currentTime = 0;
 
-    console.log(step_sound.currentTime);
     step_sound.play();
   }
 
