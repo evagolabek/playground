@@ -98,7 +98,7 @@ var reset = function(){
 var left = 0;
 var step_num = 1;
 var step_sound = new Audio('203041__jjhouse4__boots-and-spurs_step.mp3');
-
+step_sound.volumne = .5;
 var move_hero = function(){
 
   left = left + 20;
@@ -106,11 +106,15 @@ var move_hero = function(){
     step_num = 1;
   }
   if(step_num == 1 || step_num == 5){
+
+    step_sound.currentTime = 0;
+
+    console.log(step_sound.currentTime);
     step_sound.play();
   }
 
   document.getElementById('hero').style.left = left + 'px';
-  document.getElementById('hero').src = 'hero_walking_'+step_num+'.png';
+  document.getElementById('hero').src = 'images/hero_walking_'+step_num+'.png';
   step_num = step_num + 1;
   setTimeout(move_hero, 100);
 }
