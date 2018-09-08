@@ -102,10 +102,15 @@ step_sound.volumne = .5;
 var message_box = document.getElementById('message_box');
 var move_hero = function(){
 
-  // message_box.style.display = 'none';
+ 
 
   left = left + 20;
   if(left >= 130) {
+
+    message_box.innerHTML = "The door is locked, but it's very old and rotten, try to break it.";
+
+    message_box.style.display = '';
+
     hero.src = 'images/hero_walking_1.png';
     return;
   }
@@ -126,9 +131,9 @@ var move_hero = function(){
   setTimeout(move_hero, 100);
 }
 
+var start_moving = function() {
 
-var start_moving =function() {
-  message_box.style.display = 'none';
+   message_box.style.display = 'none';
 
-  move_hero();
+   move_hero();
 }

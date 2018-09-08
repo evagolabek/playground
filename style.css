@@ -55,8 +55,8 @@ button {
   width: 600px;
   padding: 25px 25px 25px 25px;
   color: white;
-  background-color: rgba(0,0,110,8);
+  background-color: rgba(0,0,110,.4);
   border: 2px solid white;
-  border-radius: 15px 15px 15px 15px;
-  
+  border-radius: 10px 10px 10px 10px;
+  visibility: hidden;
 }
